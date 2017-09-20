@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "build": "babel src/ --out-dir lib/ --source-maps inline --presets=env",
+    "build": "babel src/ --out-dir lib/ --presets=env",
     "test:convert": "npm run build && babel-node --presets env ./test/convert.test.js -b"
   },
   "repository": {

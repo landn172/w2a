@@ -3,7 +3,7 @@ import fs from 'fs'
 
 import { replaceNotCompatibleName, replaceWx2My } from '../src/script-convert.js'
 import { replaceImportCss } from '../src/style-convert.js'
-import { replacePrefixAttribute, replaceImportXml, replaceEventAttribute } from '../src/xml-convert.js'
+import { replaceImportXml, replaceAttributePromise } from '../src/xml-convert.js'
 import { replaceAppJson, replacePageJson } from '../src/json-convert.js'
 import * as utils from '../src/utils.js'
 
@@ -133,8 +133,7 @@ function convertStyleCodePromise(code) {
 function convertXmlCodePromise(code) {
   return Promise.resolve(code)
     .then(ncode => replaceImportXml(ncode))
-    .then(ncode => replacePrefixAttribute(ncode))
-    .then(ncode => replaceEventAttribute(ncode))
+    .then(ncode => replaceAttributePromise(ncode))
 }
 
 function convertScriptCodePromise(code) {
