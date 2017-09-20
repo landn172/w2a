@@ -1,10 +1,10 @@
 // wx. => my.
-function replaceWx2My(code) {
+export function replaceWx2My(code) {
   return code.replace(/(wx\.)/gi, 'my.')
 }
 
 // 替换 命名不兼容的api
-function replaceNotCompatibleName(code) {
+export function replaceNotCompatibleName(code) {
   return code
     // wx.request => my.httpRequest
     .replace(/wx\.request/g, 'my.httpRequest')
@@ -13,4 +13,4 @@ function replaceNotCompatibleName(code) {
 }
 
 // 替换 命名以及入参都不兼容
-function replaceNotCompatibleApi(code) {}
+export function replaceNotCompatibleApi(code) {}
