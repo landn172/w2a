@@ -15,6 +15,10 @@ export default function requestPayment({
   fail,
   complete
 }) {
+  if (!orderStr) {
+    console.warn(`orderStr 为空`)
+    return
+  }
   tradePay({
     orderStr,
     success({ resultCode }) {

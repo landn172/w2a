@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "directories": {
     "test": "test"
   },
@@ -26,9 +28,12 @@
     "babel-preset-env": "^1.6.0",
     "cross-env": "^5.0.5",
     "eslint": "^4.7.0",
-    "glob": "^7.1.2"
+    "glob": "^7.1.2",
+    "parse5": "^3.0.2"
   },
   "dependencies": {
-    "lodash": "^4.17.4"
+    "htmlparser2": "^3.9.2",
+    "lodash": "^4.17.4",
+    "xml-js": "^1.4.2"
   }
 }

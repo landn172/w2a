@@ -67,7 +67,7 @@ export function convertXmls({ src, dist, files }) {
 }
 
 export function convertStyles({ src, dist, files }) {
-  const ext = 'acxx'
+  const ext = 'acss'
   const timeName = `${ext}`
   console.time(timeName)
 
