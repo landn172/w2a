@@ -6,12 +6,16 @@ export const TAG_NAMES = {
   BUTTON: 'button',
   VIEW: 'view',
   SCROLLVIEW: 'scroll-view',
+
   SWIPER: 'swiper',
+  SWIPERITEM: 'swiper-item',
 
   MOVABLEVIEW: 'movable-view',
   MOVABLEAREA: 'movable-area',
 
   COVERVIEW: 'cover-view',
+  COVERIMAGE: 'cover-image',
+
   ICON: 'icon',
   TEXT: 'text',
   RICHTEXT: 'rich-text',
