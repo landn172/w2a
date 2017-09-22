@@ -1,8 +1,24 @@
 # w2a 微信转支付宝
+
+## 开始
+
+项目目前还未发布到npm上,还在开发完善中,仅在windows下测试过
+
+目前使用方式参考 /test/convert.test.js
+
+```js
+import { convert, generateDistPath } from 'w2a/lib/index.js'
+const src = 'your project'
+const dist = generateDistPath(src) //you project-convert
+convert(src)
+```
+
 ## 目前发现不支持转换情况列表
 
-1. icon[type=circle],icon[type=info_circle] 支付宝小程序不支持
-2. input onInput不支持return
+1.icon[type=circle],icon[type=info_circle] 支付宝小程序不支持
+
+2.input onInput不支持return
+
 ```js
  bindReplaceInput: function(e) {
     var value = e.detail.value
@@ -24,6 +40,6 @@
     //return value.replace(/11/g,'2'),
   }
 ```
-3. 各种不支持元素class、style
-4. picker 不支持mode
 
+3.各种不支持元素class、style
+4.picker 不支持mode
