@@ -8,7 +8,7 @@ import requestPayment from './api/requestPayment.js'
 import getUserInfo from './api/getUserInfo.js'
 
 const oldPage = Page
-const oldApp = App
+// const oldApp = App
 
 my.showToast = showToast
 my.showModal = showModal
