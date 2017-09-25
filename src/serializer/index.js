@@ -108,7 +108,7 @@ class Serializer {
 
     for (var i = 0, attrsLength = attrs.length; i < attrsLength; i++) {
       var attr = attrs[i];
-      var value = this.escapeString(attr.value, true);
+      var value = attr.value; //this.escapeString(attr.value, true);
 
       this.html += ' ';
 
@@ -132,9 +132,8 @@ class Serializer {
     if (parentTn === $.IMPORT)
       this.html += content;
     else
-      this.html += this.escapeString(content, false);
+      this.html += content //this.escapeString(content, false);
   }
-
 
   _serializeCommentNode(node) {
     this.html += '<!--' + this.treeAdapter.getCommentNodeContent(node) + '-->';

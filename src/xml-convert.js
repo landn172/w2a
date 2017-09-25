@@ -148,8 +148,6 @@ function replaceEventAttribute(code) {
   })
 }
 
-
-
 function replaceTagAttribute(tagName, key, value) {
   const replaceFunc = tagReplaceMapping[tagName]
   if (typeof replaceFunc === 'function') {
