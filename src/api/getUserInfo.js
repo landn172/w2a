@@ -1,13 +1,14 @@
-const getAuthUserInfo = my.getAuthUserInfo
+import { noop } from './common.js'
+import { fetchUserInfoShare } from './external.js'
 
-const { fetchUserInfoShare } = require('./external.js')
+const getAuthUserInfo = my.getAuthUserInfo
 
 export default function getUserInfo({
   withCredentials,
   lang,
-  success,
-  fail,
-  complete
+  success = noop,
+  fail = noop,
+  complete = noop
 }) {
   new Promise(resolve => {
     if (withCredentials) {

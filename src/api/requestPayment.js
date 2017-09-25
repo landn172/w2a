@@ -1,3 +1,5 @@
+import { noop } from './common.js'
+
 const tradePay = my.tradePay
 
 const RESULT_CODE_MESSAGE = {
@@ -11,9 +13,9 @@ const RESULT_CODE_MESSAGE = {
 
 export default function requestPayment({
   orderStr,
-  success,
-  fail,
-  complete
+  success = noop,
+  fail = noop,
+  complete = noop
 }) {
   if (!orderStr) {
     console.warn(`orderStr 为空`)

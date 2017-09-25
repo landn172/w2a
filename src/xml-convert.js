@@ -19,10 +19,11 @@ const eventAttributeMapping = {
   markertap: 'MarkerTap',
   callouttap: 'CalloutTap',
   controltap: 'ControlTap',
-  regionchange: 'RegionChange'
+  regionchange: 'RegionChange',
+  submit: 'Submit'
 }
 
-const eventAttributeRegex = new RegExp(`bind(${Object.keys(eventAttributeMapping).join('|')})(\\s*=)`, 'ig')
+const eventAttributeRegex = new RegExp(`bind(${Object.keys(eventAttributeMapping).join('|')})`, 'ig')
 
 export function replaceAttributePromise(code) {
   return Promise.resolve(parseXML2Node(code))
@@ -143,8 +144,8 @@ function replacePrefixAttribute(code) {
 
 function replaceEventAttribute(code) {
   //bindtap => onTap
-  return code.replace(eventAttributeRegex, (match, p1, p2) => {
-    return `on${eventAttributeMapping[p1]}${p2}`
+  return code.replace(eventAttributeRegex, (match, p1) => {
+    return `on${eventAttributeMapping[p1]}`
   })
 }
 

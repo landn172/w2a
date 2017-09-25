@@ -1,6 +1,8 @@
 /**
  * wx.showModal => my.confirm
  */
+import { noop } from './common.js'
+
 const myConfirm = my.confirm
 export default function showModal({
   title,
@@ -10,9 +12,9 @@ export default function showModal({
   cancelColor,
   confirmText,
   confirmColor,
-  success,
-  fail,
-  complete,
+  success = noop,
+  fail = noop,
+  complete = noop,
 }) {
   myConfirm({
     title,

@@ -1,9 +1,11 @@
+import { noop } from './common.js'
+
 const getAuthCode = my.getAuthCode
 
 export default function login({
-  success,
-  fail,
-  complete
+  success = noop,
+  fail = noop,
+  complete = noop
 }) {
   getAuthCode({
     success({

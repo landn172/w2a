@@ -1,3 +1,5 @@
+import { noop } from './common.js'
+
 const myShowToast = my.showToast
 
 /**
@@ -14,9 +16,9 @@ export default function showToast({
   title,
   icon = 'loading', //success,loading
   duration,
-  success,
-  fail,
-  complete
+  success = noop,
+  fail = noop,
+  complete = noop
 }) {
   const typeOpts = ['success', 'fail', 'exception', 'none']
   myShowToast({
