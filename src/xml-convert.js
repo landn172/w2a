@@ -82,6 +82,15 @@ const tagReplaceMapping = {
     return {
       [attr]: value
     }
+  },
+  include(attr, value) {
+    if (attr === 'src') {
+      // .wxml => .axml
+      value = value.replace(/.wxml/g, '.axml')
+    }
+    return {
+      [attr]: value
+    }
   }
 }
 

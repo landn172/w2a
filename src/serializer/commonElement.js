@@ -1,5 +1,6 @@
 export const TAG_NAMES = {
   IMPORT: 'import',
+  INCLUDE: 'include',
   TEMPLATE: 'template',
   BLOCK: 'block',
 
