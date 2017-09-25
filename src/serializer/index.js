@@ -75,13 +75,13 @@ class Serializer {
     this.html += '<' + tn;
     this._serializeAttributes(node);
 
-    //import input slider cover-image icon template[^name]
+    //import input slider cover-image icon template[is]
     //progress checkbox radio switch textarea include
     const isSingleCloseTN = tn === $.IMPORT || tn === $.INPUT ||
       tn === $.SLIDER || tn === $.COVERIMAGE || tn === $.ICON ||
       tn === $.PROGRESS || tn === $.CHECKBOX || tn === $.RADIO ||
       tn === $.SWITCH || tn === $.TEXTAREA || tn === $.INCLUDE ||
-      (tn === $.TEMPLATE && !(node.attribs && node.attribs.name))
+      (tn === $.TEMPLATE && (node.attribs && node.attribs.is))
 
     // 单闭合标签
     if (isSingleCloseTN) {
