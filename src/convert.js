@@ -1,11 +1,11 @@
 import path from 'path'
 import fs from 'fs'
 
-import { replaceNotCompatibleName, replaceWx2My } from '../src/script-convert.js'
-import { replaceImportCss } from '../src/style-convert.js'
-import { replaceImportXml, replaceAttributePromise } from '../src/xml-convert.js'
-import { replaceAppJson, replacePageJson } from '../src/json-convert.js'
-import * as utils from '../src/utils.js'
+import { replaceNotCompatibleName, replaceWx2My } from './script-convert.js'
+import { replaceImportCss } from './style-convert.js'
+import { replaceImportXml, replaceAttributePromise } from './xml-convert.js'
+import { replaceAppJson, replacePageJson } from './json-convert.js'
+import * as utils from './utils.js'
 
 export function defaultConvert({ src, dist, files, ext = '' }) {
   ext = ext.replace('.', '') || 'default'

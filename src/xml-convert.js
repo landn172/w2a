@@ -1,4 +1,4 @@
-import { parseXML2Node, Node2XML } from '../lib/parseXML.js'
+import { parseXML2Node, Node2XML } from './parseXML.js'
 
 const eventAttributeMapping = {
   touchstart: 'TouchStart',

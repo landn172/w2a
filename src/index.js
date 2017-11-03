@@ -32,7 +32,9 @@ export function convert(src, dist = '') {
   utils.setDistPath(dist);
 
   return new Promise((resolve) => {
-    glob(path.resolve(src, './**/*'), {}, (err, files) => {
+    const convertPath = path.resolve(src, './**/*.{js,wxml,wxss,json,png,jpg,svg,gif}')
+    const notConvertPath = path.resolve(src, './npm-')
+    glob(, {}, (err, files) => {
       if (err) return console.error(err)
       //copy rewriteApi.js and api/*.js to dist
       const copyTask = copyApiFile(dist);
